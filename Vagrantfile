@@ -41,6 +41,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #  s.inline = 'puppet module install puppetlabs/vcsrepo'
   #end
 
+  config.vm.provision :shell, path: "./scripts/script.sh"
+
    # Enable puppet provisioning
   #config.vm.provision :puppet do |puppet|
   #   puppet.options = "--verbose --debug"
@@ -48,4 +50,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   puppet.manifests_path = "puppet/manifest"
   #   puppet.manifest_file  = "site.pp"
   #end
+
 end
+
+
